@@ -20,6 +20,19 @@ const questions = [
             }
         }
     },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address (Required)',
+        validate: nameInput => {
+            if(nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+            }
+        }  
+    },
 
     {
         type: 'input',
@@ -166,6 +179,23 @@ const questions = [
     }
 ];
 
+const debugQuest = [
+    {
+        type:'input',
+        name: 'title',
+        message: 'What is the name of the project? (Required)',
+        validate: nameInput => {
+            if(nameInput) {
+                return true;
+            } else {
+                console.log("Please enter your Project's name!");
+                return false;
+            }
+        }
+    }
+
+]
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 
@@ -197,7 +227,8 @@ function writeToFile(fileName, data) {
 const mockData = {
     
         title: 'Readme Architect',
-        github: 'https://github.com/tgtiburon',
+        email: 'tg.tiburon@gmail.com',
+        github: 'tgtiburon',
         description: 'This is an app that can automatically generate a README.MD file for any project.',
         languages: [ 'JavaScript', 'HTML', 'CSS', 'ES6', 'JQuery', 'Bootstrap', 'Node' ],
         link: 'https://tgtiburon.github.io/Readme_Architect/',
@@ -216,11 +247,13 @@ const mockData = {
 function init() {
 
     inquirer
-    //.prompt([questions])
-    .prompt(questions)
+  
+    //.prompt(questions)
+    .prompt(debugQuest)
+    
    
     .then(readMeAnswers => {
-        //return generatePage(readMeData);
+        
         console.log(readMeAnswers)
         console.log("it worked?")
         //return generateMarkdown(readMeAnswers);

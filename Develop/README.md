@@ -2,17 +2,17 @@
 ## Description
 This is an app that can automatically generate a README.MD file for any project.
 
-https://github.com/tgtiburon
+
 
 JavaScript,HTML,CSS,ES6,JQuery,Bootstrap,Node
 
 https://tgtiburon.github.io/Readme_Architect/
 
-Type node index.js in the commandline and answer the questions
 
-Academic Free License V3.0
 
-tg.tiburon@gmail.com, or post on the bug forum on the github page
+
+
+
 
 ![Test stuff](https://img.shields.io/static/v1?label=myLabel&message=myMessage&color=sucess)
 
@@ -21,7 +21,22 @@ tg.tiburon@gmail.com, or post on the bug forum on the github page
 
 ## Table of Contents
 
+[1. Installation](#installation)
+
+[2. Usage](#usage)
+
+[3. License](#license)
+
+[4. Contributing](#contributing)
+
+[5. Tests](#tests)
+
+[6. Questions](#questions)
+
         
+
+
+
 
 
 ## Installation
@@ -37,8 +52,9 @@ Type node index.js in the commandline and answer the questions
         
 
 
-## Liscense
+## License
 Academic Free License V3.0
+
 
 
 
@@ -62,5 +78,13 @@ Contribute by posting on the bug report forum.
 1. Do this one test.  2. Do this other test.  3 Then do this test.
 
 
+## Questions
+
+If you have any questions about this project feel free to email me at tg.tiburon@gmail.com.  
+
+To see the rest of my portfolio, visit https://github.com/tgtiburon.
+
+
+tg.tiburon@gmail.com, or post on the bug forum on the github page
 
 
