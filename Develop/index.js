@@ -183,7 +183,7 @@ const debugQuest = [
     {
         type:'input',
         name: 'title',
-        message: 'What is the name of the project? (Required)',
+        message: 'What is the name of the project on github? (Required)',
         validate: nameInput => {
             if(nameInput) {
                 return true;
@@ -226,7 +226,7 @@ function writeToFile(fileName, data) {
 // mockdata
 const mockData = {
     
-        title: 'Readme Architect',
+        title: 'Readme_Architect',
         email: 'tg.tiburon@gmail.com',
         github: 'tgtiburon',
         description: 'This is an app that can automatically generate a README.MD file for any project.',

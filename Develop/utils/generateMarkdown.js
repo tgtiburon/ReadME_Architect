@@ -16,6 +16,10 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 
+![Test](https://img.shields.io/github/license/tgtiburon/readme_architect?style=flat-square)
+
+![Test](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)
+
 
 
 ${data.languages}

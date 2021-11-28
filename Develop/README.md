@@ -1,6 +1,10 @@
-# Readme Architect
+# Readme_Architect
 ## Description
 This is an app that can automatically generate a README.MD file for any project.
+
+![Test](https://img.shields.io/github/license/tgtiburon/readme_architect?style=flat-square)
+
+![Test](https://img.shields.io/github/license/tgtiburon/Readme_Architect?style=flat-square)
 
 
 
