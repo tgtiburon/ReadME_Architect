@@ -16,17 +16,17 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 
-${data.github}
+
 
 ${data.languages}
 
 ${data.link}
 
-${data.usage}
 
-${data.license}
 
-${data.questions}
+
+
+
 
 ![Test stuff](https://img.shields.io/static/v1?label=myLabel&message=myMessage&color=sucess)
 
@@ -35,7 +35,22 @@ ${data.questions}
 
 ## Table of Contents
 
+[1. Installation](#installation)
+
+[2. Usage](#usage)
+
+[3. License](#license)
+
+[4. Contributing](#contributing)
+
+[5. Tests](#tests)
+
+[6. Questions](#questions)
+
         
+
+
+
 
 
 ## Installation
@@ -51,8 +66,9 @@ ${data.usage}
         
 
 
-## Liscense
+## License
 ${data.license}
+
 
 
 
@@ -76,6 +92,14 @@ ${data.contributing}
 ${data.tests}
 
 
+## Questions
+
+If you have any questions about this project feel free to email me at ${data.email}.  
+
+To see the rest of my portfolio, visit https://github.com/${data.github}.
+
+
+${data.questions}
 
 
 `;
