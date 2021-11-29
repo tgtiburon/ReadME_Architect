@@ -20,19 +20,6 @@ const questions = [
             }
         }
     },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'Enter your email address (Required)',
-        validate: nameInput => {
-            if(nameInput) {
-                return true;
-            } else {
-                console.log('Please enter your email address!');
-                return false;
-            }
-        }  
-    },
 
     {
         type: 'input',
@@ -47,11 +34,27 @@ const questions = [
             }
         }  
     },
+   
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address (Required)',
+        validate: nameInput => {
+            if(nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your email address!');
+                return false;
+            }
+        }  
+    },
+
+   
   
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a description for your project:',
+        message: 'Provide a description for your project. (Required)',
         validate: descriptionInput => {
             if(descriptionInput) {
                 return true;
@@ -67,62 +70,11 @@ const questions = [
         type: 'checkbox',
         name: 'languages',
         message: 'What did you build this project with? (Check all that apply)',
-        choices : ['JavaScript', 'HTML', 'CSS', 'ES6', 'JQuery', 'Bootstrap', 'Node']
+        choices : ['JavaScript', 'HTML', 'CSS', 'Express.js', 'JQuery', 'Bootstrap', 
+                    'Node.js', 'React', 'Microsoft SQL Server', 'MySQL', 'Sequelize', 
+                    'Prisma']
     },
 
-    {
-        type: 'input',
-        name: 'link',
-        message: 'Enter the GitHub link to your project. (Required)',
-        validate: linkInput => {
-            if(linkInput) {
-                return true;
-            } else {
-                console.log('Please enter your GitHub link!');
-                return false;
-            }
-        }  
-    },
-
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'Enter installation steps. (Required)',
-        validate: installationInput => {
-            if(installationInput) {
-                return true;
-            } else {
-                console.log('Please enter your installation steps!');
-                return false;
-            }
-        }  
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Enter how to use this project. (Required)',
-        validate: usageInput => {
-            if(usageInput) {
-                return true;
-            } else {
-                console.log('Please enter how to use this project!');
-                return false;
-            }
-        }  
-    },
-    {
-        type: 'input',
-        name: 'link',
-        message: 'Enter the GitHub link to your project. (Required)',
-        validate: linkInput => {
-            if(linkInput) {
-                return true;
-            } else {
-                console.log('Please enter your GitHub link!');
-                return false;
-            }
-        }  
-    },
     {
         type: 'checkbox',
         name: 'license',
@@ -138,15 +90,56 @@ const questions = [
                     'PostgreSQL License', 'SIL Open Font License 1.1', 'University of Illinois/NCSA Open Source License', 'The Unlicense', 
                     'zLib License']
     },
+
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Enter installation steps. (Enter for none)',
+        validate: installationInput => {
+            if(installationInput) {
+                return true;
+            } else {
+                //console.log('Please enter your installation steps!');
+                return false;
+            }
+        }  
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter how to use this project. (Enter for none)',
+        validate: usageInput => {
+            if(usageInput) {
+                return true;
+            } else {
+                //console.log('Please enter how to use this project!');
+                return false;
+            }
+        }  
+    },
+    // {
+    //     type: 'input',
+    //     name: 'link',
+    //     message: 'Enter the GitHub link to your project. (Required)',
+    //     validate: linkInput => {
+    //         if(linkInput) {
+    //             return true;
+    //         } else {
+    //             console.log('Please enter your GitHub link!');
+    //             return false;
+    //         }
+    //     }  
+    // },
+   
     {
         type: 'input',
         name: 'contributing',
-        message: 'How can people contribute to the project?(Required)',
+        message: 'How can people contribute to the project? (Enter for none)',
         validate: contributingInput => {
             if(contributingInput) {
                 return true;
             } else {
-                console.log('Please enter how you want people to contribute!');
+                //console.log('Please enter how you want people to contribute!');
                 return false;
             }
         }  
@@ -154,25 +147,38 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Enter tests that can be conducted. (Required)',
+        message: 'Enter tests that can be conducted. (Enter for none)',
         validate: testsInput => {
             if(testsInput) {
                 return true;
             } else {
-                console.log('Please enter the tests that can be done!');
+                //console.log('Please enter the tests that can be done!');
                 return false;
             }
         }  
     },
+    // {
+    //     type: 'input',
+    //     name: 'questions',
+    //     message: 'Enter how you want questions asked. (Required)',
+    //     validate: questionInput => {
+    //         if(questionInput) {
+    //             return true;
+    //         } else {
+    //             console.log('Please enter how you want questions asked!');
+    //             return false;
+    //         }
+    //     }  
+    // },
     {
         type: 'input',
-        name: 'questions',
-        message: 'Enter how you want questions asked. (Required)',
-        validate: questionInput => {
-            if(questionInput) {
+        name: 'credits',
+        message: 'Are there any sources you would like to credit? (Enter for none)',
+        validate: creditsInput => {
+            if(creditsInput) {
                 return true;
             } else {
-                console.log('Please enter how you want questions asked!');
+                //console.log('Please enter the tests that can be done!');
                 return false;
             }
         }  
@@ -226,18 +232,23 @@ function writeToFile(fileName, data) {
 // mockdata
 const mockData = {
     
+        
         title: 'Readme_Architect',
-        email: 'tg.tiburon@gmail.com',
         github: 'tgtiburon',
-        description: 'This is an app that can automatically generate a README.MD file for any project.',
-        languages: [ 'JavaScript', 'HTML', 'CSS', 'ES6', 'JQuery', 'Bootstrap', 'Node' ],
-        link: 'https://tgtiburon.github.io/Readme_Architect/',
-        installation: '1.Do this one thing.  2.Do that other thing.  3. Do this too.',
-        usage: 'Type node index.js in the commandline and answer the questions',
-        license: [ 'Academic Free License V3.0' ],
-        contributing: 'Contribute by posting on the bug report forum.',
-        tests: '1. Do this one test.  2. Do this other test.  3 Then do this test.',
-        questions: 'tg.tiburon@gmail.com, or post on the bug forum on the github page'    
+        email: 'tg.tiburon@gmail.com',
+        description: 'This project allows the user to create a professional Readme.md for any project they want.  ',
+        languages: [ 'JavaScript', 'Node.js', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
+        license: [ 'MIT' ],
+        installation: '1. Clone from my git repository. 2. install inquirer. 3. Type node index.js in the command line.',
+        //installation: '',
+        usage: 'Type node index.js from the develop directory.',
+        //usage: '',
+        contributing: 'Contact me via my email, or post an issue on the repository.',
+        //constributing: '',
+        tests: '1. Run test 1  2. Run test 2 3. Run Test 3',
+        //tests: '',
+        credits: 'img.shields.io'
+        //credits: ''
 
 }
 
@@ -248,14 +259,14 @@ function init() {
 
     inquirer
   
-    //.prompt(questions)
+   // .prompt(questions)
     .prompt(debugQuest)
     
    
     .then(readMeAnswers => {
         
         console.log(readMeAnswers)
-        console.log("it worked?")
+        console.log("it worked")
         //return generateMarkdown(readMeAnswers);
         // DEBUG 
         // DEBUG
@@ -283,6 +294,7 @@ function init() {
             
         }
     });
+
 
 
 
