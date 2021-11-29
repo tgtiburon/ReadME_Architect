@@ -236,7 +236,7 @@ const mockData = {
         title: 'Readme_Architect',
         github: 'tgtiburon',
         email: 'tg.tiburon@gmail.com',
-        description: 'This project allows the user to create a professional Readme.md for any project they want.  ',
+        description: 'This project allows the user to create a professional Readme for any project they want.  ',
         languages: [ 'JavaScript', 'Node.js', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
         license: [ 'MIT' ],
         installation: 'Clone from my git repository;install inquirer;Type node index.js in the command line',

@@ -8,7 +8,7 @@
   ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white) 
   ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) 
 ## Description
-This project allows the user to create a professional Readme.md for any project they want.  
+This project allows the user to create a professional Readme for any project they want.  
 
 ---
 
