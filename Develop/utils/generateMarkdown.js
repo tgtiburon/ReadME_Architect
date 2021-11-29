@@ -58,33 +58,92 @@ const generateTOC = data => {
 };
 
 const generateInstallation = data => {
-  if(data.installation !== '')
-  {
-  return `
-## Installation
-${data.installation}`;
+ 
+
+  if(data.installation !== ''){
+    let stringInstallation = `## Installation`;
+   // console.log(stringInstallation);
+    let tmpString = data.installation;
+    let tmpArray = tmpString.split(";");
+    //console.log(tmpArray);
+    let i = 0;
+   // console.log(tmpArray);
+    tmpArray.forEach(element => {
+      i++;
+      console.log("element: ", element);
+      //let tmpString2 = element;
+      stringInstallation += `
+
+      ${i}. ${element} `;
+     // console.log(stringInstallation);
+
+      
+      
+    });
+    //console.log(stringInstallation);
+  return stringInstallation;
 
   };
 
 };
 
 const generateUsage = data => {
-  if(data.usage !== '') {
-  return `
-## Usage
-${data.usage}`;
+
+  if(data.usage !== ''){
+    let stringUsage = `## Usage`;
+    //console.log(stringUsage);
+    let tmpString = data.usage;
+    let tmpArray = tmpString.split(";");
+    //console.log(tmpArray);
+    let i = 0;
+   // console.log(tmpArray);
+    tmpArray.forEach(element => {
+      i++;
+      console.log("element: ", element);
+      //let tmpString2 = element;
+      stringUsage += `
+
+      ${i}. ${element} `;
+     // console.log(stringUsage);
+
+      
+      
+    });
+   // console.log(stringUsage);
+  return stringUsage;
+
   };
+
 };
 
 const generateCredits = data => {
-  if(data.credits !== ''){ 
-  return `
-## Credits
-${data.credits}`;
+  if(data.credits !== ''){
+    let stringCredits = `## Credits`;
+    //console.log(stringInstallation);
+    let tmpString = data.credits;
+    console.log("credits:" +tmpString);
+    let tmpArray = tmpString.split(";");
+    console.log(tmpArray);
+    //console.log(tmpArray);
+    let i = 0;
+    //console.log(tmpArray);
+    tmpArray.forEach(element => {
+      i++;
+      console.log("element: ", element);
+      //let tmpString2 = element;
+      stringCredits += `
+
+      ${i}. ${element} `;
+      //console.log(stringInstallation);
+
+      
+      
+    });
+    //console.log(stringCredits);
+  return stringCredits;
 
   };
-
-
+ 
 };
 
 const generateLicense = data => {
@@ -106,34 +165,67 @@ ${data.features}`;
 };
 
 const generateContributing = data => {
-  if(data.contributing !== '') {
-  return `
-## Contributing
-${data.contributing}`;
+  if(data.contributing !== ''){
+    let stringContributing = `## Contributing`;
+   // console.log(stringContributing);
+    let tmpString = data.contributing;
+    //console.log("contributing: " + tmpString);
+    let tmpArray = tmpString.split(";");
+    //console.log(tmpArray);
+    let i = 0;
+   // console.log(tmpArray);
+    tmpArray.forEach(element => {
+      i++;
+      console.log("element: ", element);
+      //let tmpString2 = element;
+      stringContributing += `
+
+      ${i}. ${element} `;
+      //console.log(stringInstallation);
+
+      
+      
+    });
+    //console.log(stringInstallation);
+  return stringContributing;
+
   };
+  
 };
 
 const generateTests = data => {
-  if(data.tests !== '') {
-  return `
-## Tests
-${data.tests}`;
+  if(data.tests !== ''){
+    let stringTests = `## Tests`;
+   // console.log(stringInstallation);
+    let tmpString = data.tests;
+    let tmpArray = tmpString.split(";");
+    //console.log(tmpArray);
+    let i = 0;
+    //console.log(tmpArray);
+    tmpArray.forEach(element => {
+      i++;
+      console.log("element: ", element);
+      //let tmpString2 = element;
+      stringTests += `
+
+      ${i}. ${element} `;
+     // console.log(stringInstallation);
+
+      
+      
+    });
+   // console.log(stringInstallation);
+  return stringTests;
+
   };
+
 };
 
 const generateBadges = data => {
-  console.log(data.languages);
+ 
   let strLanguages =  ``;
   data.languages.forEach(element => {
-    console.log(element);
-    /*
-'JavaScript', 'HTML', 'CSS', 'Express.js', 'JQuery', 'Bootstrap', 
-                    'Node.js', 'React', 'Microsoft SQL Sever', 'MySQL', 'Suelize', 
-                    'Prisma'
-
-
-
-    */
+   
     if(element == "HTML") {
       strLanguages += `
   ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) `;
@@ -187,24 +279,9 @@ const generateBadges = data => {
     
   });
   
-
-  //return `
-
-//![Test](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)
-//![${data.title}](https://img.shields.io/github/languages/top/${data.github}/${data.title})
-
-//${data.languages}
-
-
-//![Test stuff](https://img.shields.io/static/v1?label=myLabel&message=myMessage&color=sucess)
-
-
-
-//`
-console.log(strLanguages);
+//console.log(strLanguages);
 return strLanguages;
 };
-
 
 
 // TODO: Create a function to generate markdown for README

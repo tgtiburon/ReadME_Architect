@@ -94,7 +94,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Enter installation steps. (Enter for none)',
+        message: 'Enter installation steps. Put a ";" at the end of each step. (Enter for none)',
         validate: installationInput => {
             if(installationInput) {
                 return true;
@@ -107,7 +107,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Enter how to use this project. (Enter for none)',
+        message: 'Enter how to use this project. Put a ";" at the end of each step. (Enter for none)',
         validate: usageInput => {
             if(usageInput) {
                 return true;
@@ -134,7 +134,7 @@ const questions = [
     {
         type: 'input',
         name: 'contributing',
-        message: 'How can people contribute to the project? (Enter for none)',
+        message: 'How can people contribute to the project? Put a ";" at the end of each way. (Enter for none)',
         validate: contributingInput => {
             if(contributingInput) {
                 return true;
@@ -147,7 +147,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Enter tests that can be conducted. (Enter for none)',
+        message: 'Enter tests that can be conducted. Put a ";" at the end of each test. (Enter for none)',
         validate: testsInput => {
             if(testsInput) {
                 return true;
@@ -173,7 +173,7 @@ const questions = [
     {
         type: 'input',
         name: 'credits',
-        message: 'Are there any sources you would like to credit? (Enter for none)',
+        message: 'Are there any sources you would like to credit? Put a ";" at the end of each. (Enter for none)',
         validate: creditsInput => {
             if(creditsInput) {
                 return true;
@@ -239,13 +239,13 @@ const mockData = {
         description: 'This project allows the user to create a professional Readme.md for any project they want.  ',
         languages: [ 'JavaScript', 'Node.js', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
         license: [ 'MIT' ],
-        installation: '1. Clone from my git repository. 2. install inquirer. 3. Type node index.js in the command line.',
+        installation: 'Clone from my git repository;install inquirer;Type node index.js in the command line',
         //installation: '',
-        usage: 'Type node index.js from the develop directory.',
+        usage: 'Type node index.js from the develop directory;Answer the questions as detailed as possible',
         //usage: '',
-        contributing: 'Contact me via my email, or post an issue on the repository.',
+        contributing: 'Contact me via my email;Post an issue on the repository.',
         //constributing: '',
-        tests: '1. Run test 1  2. Run test 2 3. Run Test 3',
+        tests: 'Run test 1;Run test2;Run Test 3',
         //tests: '',
         credits: 'img.shields.io'
         //credits: ''

@@ -28,15 +28,21 @@ This project allows the user to create a professional Readme.md for any project 
   [Questions](#questions)
   
   ---
-
 ## Installation
-1. Clone from my git repository. 2. install inquirer. 3. Type node index.js in the command line.
 
+      1. Clone from my git repository 
+
+      2. install inquirer 
+
+      3. Type node index.js in the command line 
 ## Usage
-Type node index.js from the develop directory.
 
+      1. Type node index.js from the develop directory 
+
+      2. Answer the questions as detailed as possible 
 ## Credits
-img.shields.io
+
+      1. img.shields.io 
 
 ## License 
 MIT
@@ -44,12 +50,18 @@ MIT
 
 ## Features
 undefined
-
 ## Contributing
-Contact me via my email, or post an issue on the repository.
 
+      1. Contact me via my email 
+
+      2. Post an issue on the repository. 
 ## Tests
-1. Run test 1  2. Run test 2 3. Run Test 3
+
+      1. Run test 1 
+
+      2. Run test2 
+
+      3. Run Test 3 
 
 
 ## Questions
