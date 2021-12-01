@@ -1,5 +1,8 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+/*  Function: renderLicenseBadge()  
+    => inserts the license badge into the readme
+    args: data from inquirer
+    return: literal string
+*/
 function renderLicenseBadge(license) {
   data = license;
   console.log(data.license);
@@ -10,8 +13,11 @@ function renderLicenseBadge(license) {
   
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+/*  Function: renderLicenseLink()  
+    => inserts the liscense link into the readme
+    args: inquirer data
+    return: literal string
+*/
 function renderLicenseLink(license) {
   data = license;
   console.log(data.license);
@@ -25,8 +31,11 @@ function renderLicenseLink(license) {
 
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+/*  Function: renderLicenseSection()  
+    => inserts the license section if the user wanted one.
+    args: inquirer data
+    return: literal string
+*/
 function renderLicenseSection(license) {
 
   data = license;
@@ -37,7 +46,11 @@ function renderLicenseSection(license) {
   ## License `
     };
 }
-
+/*  Function: genrateTOC()  
+    => generates a table of contents based on inquirer answers
+    args: inquirer data
+    return: literal string TOC
+*/
 const generateTOC = data => {
  
   let stringTOC = `---
@@ -90,6 +103,11 @@ const generateTOC = data => {
   
 };
 
+/*  Function: generateInstallation()  
+    => generates installation directions 
+    args: inquirer data
+    return: literal string
+*/
 const generateInstallation = data => {
  
 
@@ -117,7 +135,11 @@ const generateInstallation = data => {
   };
 
 };
-
+/*  Function: generateUsage()  
+    => generates usage directions 
+    args: inquirer data
+    return: literal string
+*/
 const generateUsage = data => {
 
   if(data.usage !== ''){
@@ -143,7 +165,11 @@ const generateUsage = data => {
   };
 
 };
-
+/*  Function: generateCredits()  
+    => generates credits 
+    args: inquirer data
+    return: literal string
+*/
 const generateCredits = data => {
   if(data.credits !== ''){
     let stringCredits = `---
@@ -170,11 +196,15 @@ const generateCredits = data => {
   };
  
 };
-
+/*  Function: generateFeatures()  
+    => generates features section 
+    args: inquirer data
+    return: literal string
+*/
 const generateFeatures = data => {
   if(data.features !== ''){
     let stringFeatures = `---
-  ## Features`;
+    ## Features`;
   
     let tmpString = data.features;
   
@@ -195,7 +225,11 @@ const generateFeatures = data => {
 
   };
 };
-
+/*  Function: generateContributing()  
+    => generates how to contribute directions 
+    args: inquirer data
+    return: literal string
+*/
 const generateContributing = data => {
   if(data.contributing !== ''){
     let stringContributing = `
@@ -223,6 +257,11 @@ const generateContributing = data => {
   
 };
 
+/*  Function: generateTests()  
+    => generates test directions 
+    args: inquirer data
+    return: literal string
+*/
 const generateTests = data => {
   if(data.tests !== ''){
     let stringTests = `---
@@ -244,12 +283,21 @@ const generateTests = data => {
   };
 
 };
-
+/*  Function: generateBadges()  
+    => generates badges for the top of the page 
+    args: inquirer data
+    return: literal string
+*/
 const generateBadges = data => {
  
   let strLanguages =  ``;
+  strLanguages += `
+  ![License](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)
+  `;
+ 
   data.languages.forEach(element => {
-   
+
+    
     if(element == "HTML") {
       strLanguages += `
   ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) `;
@@ -306,7 +354,11 @@ const generateBadges = data => {
 
 return strLanguages;
 };
-
+/*  Function: generateScreenShot()  
+    => inserts a screen shot into the readme
+    args: inquirer data
+    return: literal string
+*/
 const generateScreenShot = data => {
 
   if(data.screenShot !== ''){
@@ -326,8 +378,11 @@ const generateScreenShot = data => {
 
 }
 
-
-// TODO: Create a function to generate markdown for README
+/*  Function: generateMarkdown()  
+    => generates the actual Markdown file 
+    args: inquirer data
+    return: literal string of whole MD file
+*/
 function generateMarkdown(data) {
   return `# ${data.title}
 ---

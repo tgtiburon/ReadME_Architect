@@ -1,6 +1,8 @@
 # Readme_Architect
 ---
 
+  ![License](https://img.shields.io/github/license/tgtiburon/Readme_Architect?style=flat-square)
+  
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
   ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) 
   ![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white) 
@@ -10,7 +12,7 @@
 ## Description
 This project allows the user to create a professional Readme for any project they want.  
 ---
-  ## Features
+    ## Features
 
       1. Generates a complete README from the commandline 
 

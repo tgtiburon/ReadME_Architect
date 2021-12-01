@@ -1,11 +1,11 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 
 
-// TODO: Create an array of questions for user input
+// Questions to be asked by inquirer
 const questions = [
     {
         type:'input',
@@ -49,8 +49,6 @@ const questions = [
         }  
     },
 
-   
-  
     {
         type: 'input',
         name: 'description',
@@ -73,7 +71,6 @@ const questions = [
             if(installationInput) {
                 return true;
             } else {
-                //console.log('Please enter your installation steps!');
                 return false;
             }
         }  
@@ -143,20 +140,7 @@ const questions = [
             }
         }  
     },
-    // {
-    //     type: 'input',
-    //     name: 'link',
-    //     message: 'Enter the GitHub link to your project. (Required)',
-    //     validate: linkInput => {
-    //         if(linkInput) {
-    //             return true;
-    //         } else {
-    //             console.log('Please enter your GitHub link!');
-    //             return false;
-    //         }
-    //     }  
-    // },
-   
+ 
     {
         type: 'input',
         name: 'contributing',
@@ -183,19 +167,7 @@ const questions = [
             }
         }  
     },
-    // {
-    //     type: 'input',
-    //     name: 'questions',
-    //     message: 'Enter how you want questions asked. (Required)',
-    //     validate: questionInput => {
-    //         if(questionInput) {
-    //             return true;
-    //         } else {
-    //             console.log('Please enter how you want questions asked!');
-    //             return false;
-    //         }
-    //     }  
-    // },
+   
     {
         type: 'input',
         name: 'credits',
@@ -228,7 +200,11 @@ const debugQuest = [
 
 ]
 
-// TODO: Create a function to write README file
+/*  Function: writeToFile()  
+    => writes the data to the readme
+    args: fileName and data to be saved
+    return: none
+*/
 function writeToFile(fileName, data) {
 
     return new Promise((resolve, rejects) => {
@@ -291,7 +267,7 @@ const mockData2 = {
     screenShot: "Weather_Watcher.PNG",
     languages: [ 'JavaScript', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
     license: [ 'MIT' ],
-    installation: 'Run at https://tgtiburon.github.io/Weather_Watcher/;or clone from my git repository and run locally',
+    installation: 'Run at https://tgtiburon.github.io/Weather_Watcher/ ;or clone from my git repository and run locally',
     //installation: '',
     usage: 'Type any city in the Search for a City input box;It will keep your last 8 searches.',
     //usage: '',
@@ -304,9 +280,11 @@ const mockData2 = {
 
 }
 
-
-
-    // TODO: Create a function to initialize app
+/*  Function: init()  
+    => Asks inquirer questions
+    args: none
+    return: none
+*/
 function init() {
 
     inquirer
@@ -346,10 +324,6 @@ function init() {
             
         }
     });
-
-
-
-
 
 
 }
