@@ -12,7 +12,7 @@
 ## Description
 This project allows the user to create a professional Readme for any project they want.  
 ---
-    ## Features
+## Features
 
       1. Generates a complete README from the commandline 
 

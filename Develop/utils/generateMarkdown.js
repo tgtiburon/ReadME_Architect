@@ -204,7 +204,7 @@ const generateCredits = data => {
 const generateFeatures = data => {
   if(data.features !== ''){
     let stringFeatures = `---
-    ## Features`;
+## Features`;
   
     let tmpString = data.features;
   
