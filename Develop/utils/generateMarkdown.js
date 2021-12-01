@@ -1,18 +1,47 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  data = license;
+  console.log(data.license);
+  if(data.license !== ''){
+    return `
+  &emsp; ![License](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)`;
+    };
+  
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  data = license;
+  console.log(data.license);
+  if(data.license !== ''){
+    return `
+      To read about the license of this project click the link below.
+
+  &emsp;[License](https://github.com/${data.github}/${data.title}/blob/main/LICENSE) `
+    
+    };
+
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+
+  data = license;
+  console.log(data.license);
+  if(data.license !== ''){
+    return `
+  ---
+  ## License `
+    };
+}
 
 const generateTOC = data => {
  
-  let stringTOC = `## Table of Contents`;
+  let stringTOC = `---
+  ## Table of Contents`;
 
   if (data.installation !== ''){ 
     stringTOC += `
@@ -45,14 +74,12 @@ const generateTOC = data => {
  
   if (data.questions !== ''){ 
     stringTOC += `
-    
-  [Questions](#questions)`;
-  }
- 
-// Lets put a line after the TOC
-  stringTOC += `
+
+  [Questions](#questions)
   
-  ---`
+  `;
+  }
+
   return stringTOC;
   
 };
@@ -61,26 +88,24 @@ const generateInstallation = data => {
  
 
   if(data.installation !== ''){
-    let stringInstallation = `## Installation`;
-   // console.log(stringInstallation);
+    let stringInstallation = `
+  ---
+  ## Installation`;
+   
     let tmpString = data.installation;
     let tmpArray = tmpString.split(";");
-    //console.log(tmpArray);
+   
     let i = 0;
-   // console.log(tmpArray);
+   
     tmpArray.forEach(element => {
       i++;
-      console.log("element: ", element);
-      //let tmpString2 = element;
+    
       stringInstallation += `
 
       ${i}. ${element} `;
-     // console.log(stringInstallation);
-
-      
-      
+  
     });
-    //console.log(stringInstallation);
+ 
   return stringInstallation;
 
   };
@@ -90,26 +115,23 @@ const generateInstallation = data => {
 const generateUsage = data => {
 
   if(data.usage !== ''){
-    let stringUsage = `## Usage`;
-    //console.log(stringUsage);
+    let stringUsage = `---
+  ## Usage`;
+  
     let tmpString = data.usage;
     let tmpArray = tmpString.split(";");
-    //console.log(tmpArray);
+
     let i = 0;
-   // console.log(tmpArray);
+
     tmpArray.forEach(element => {
       i++;
-      console.log("element: ", element);
-      //let tmpString2 = element;
+  
       stringUsage += `
 
       ${i}. ${element} `;
-     // console.log(stringUsage);
-
-      
-      
+ 
     });
-   // console.log(stringUsage);
+
   return stringUsage;
 
   };
@@ -118,75 +140,76 @@ const generateUsage = data => {
 
 const generateCredits = data => {
   if(data.credits !== ''){
-    let stringCredits = `## Credits`;
-    //console.log(stringInstallation);
+    let stringCredits = `---
+  ## Credits`;
+  
     let tmpString = data.credits;
-    console.log("credits:" +tmpString);
+  
     let tmpArray = tmpString.split(";");
-    console.log(tmpArray);
-    //console.log(tmpArray);
+ 
     let i = 0;
-    //console.log(tmpArray);
+
     tmpArray.forEach(element => {
       i++;
-      console.log("element: ", element);
-      //let tmpString2 = element;
+     
+    
       stringCredits += `
 
       ${i}. ${element} `;
-      //console.log(stringInstallation);
-
-      
-      
+  
     });
-    //console.log(stringCredits);
+   
   return stringCredits;
 
   };
  
 };
 
-const generateLicense = data => {
-  if(data.license !== ''){
-  return `
-## License 
-${data.license}
-  &emsp; ![License](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)`;
-  };
-
-};
-
 const generateFeatures = data => {
-  if(data.features !== '') {
-  return `
-## Features
-${data.features}`;
+  if(data.features !== ''){
+    let stringFeatures = `---
+  ## Features`;
+  
+    let tmpString = data.features;
+  
+    let tmpArray = tmpString.split(";");
+ 
+    let i = 0;
+
+    tmpArray.forEach(element => {
+      i++;
+     
+      stringFeatures += `
+
+      ${i}. ${element} `;
+   
+    });
+   
+  return stringFeatures;
+
   };
 };
 
 const generateContributing = data => {
   if(data.contributing !== ''){
-    let stringContributing = `## Contributing`;
-   // console.log(stringContributing);
+    let stringContributing = `---
+  ## Contributing`;
+  
     let tmpString = data.contributing;
-    //console.log("contributing: " + tmpString);
+    
     let tmpArray = tmpString.split(";");
-    //console.log(tmpArray);
+    
     let i = 0;
-   // console.log(tmpArray);
+  
     tmpArray.forEach(element => {
       i++;
-      console.log("element: ", element);
-      //let tmpString2 = element;
+  
       stringContributing += `
 
       ${i}. ${element} `;
-      //console.log(stringInstallation);
-
-      
-      
+ 
     });
-    //console.log(stringInstallation);
+  
   return stringContributing;
 
   };
@@ -195,26 +218,20 @@ const generateContributing = data => {
 
 const generateTests = data => {
   if(data.tests !== ''){
-    let stringTests = `## Tests`;
-   // console.log(stringInstallation);
+    let stringTests = `---
+  ## Tests`;
+   
     let tmpString = data.tests;
     let tmpArray = tmpString.split(";");
-    //console.log(tmpArray);
+    
     let i = 0;
-    //console.log(tmpArray);
+  
     tmpArray.forEach(element => {
       i++;
-      console.log("element: ", element);
-      //let tmpString2 = element;
       stringTests += `
-
-      ${i}. ${element} `;
-     // console.log(stringInstallation);
-
-      
-      
+      ${i}. ${element} `;  
     });
-   // console.log(stringInstallation);
+ 
   return stringTests;
 
   };
@@ -279,7 +296,7 @@ const generateBadges = data => {
     
   });
   
-//console.log(strLanguages);
+
 return strLanguages;
 };
 
@@ -292,20 +309,18 @@ ${generateBadges(data)}
 ## Description
 ${data.description}
 
----
-
- 
-
+${generateFeatures(data)}
 ${generateTOC(data)}
 ${generateInstallation(data)}
 ${generateUsage(data)}
 ${generateCredits(data)}
-${generateLicense(data)}
-${generateFeatures(data)}
+${renderLicenseSection(data)}
+${renderLicenseBadge(data)}
+${renderLicenseLink(data)}
 ${generateContributing(data)}
 ${generateTests(data)}
 
-
+---
 ## Questions
 
 If you have any questions about this project feel free to [email](${data.email}) me .  

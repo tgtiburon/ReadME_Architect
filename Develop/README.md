@@ -10,11 +10,19 @@
 ## Description
 This project allows the user to create a professional Readme for any project they want.  
 
+
 ---
+  ## Features
 
- 
+      1. Generates a complete README from the commandline 
 
-## Table of Contents
+      2. Links directly to your repository 
+
+      3. Links directly to your License 
+
+
+---
+  ## Table of Contents
   [Installation](#installation)
     
   [Usage](#usage)
@@ -24,46 +32,53 @@ This project allows the user to create a professional Readme for any project the
   [Contributing](#contributing)
     
   [Tests](#tests)
-    
+
   [Questions](#questions)
   
+  
+
   ---
-## Installation
+  ## Installation
 
       1. Clone from my git repository 
 
       2. install inquirer 
 
       3. Type node index.js in the command line 
-## Usage
+---
+  ## Usage
 
       1. Type node index.js from the develop directory 
 
       2. Answer the questions as detailed as possible 
-## Credits
+---
+  ## Credits
 
       1. img.shields.io 
 
-## License 
-MIT
+  ---
+  ## License 
+
   &emsp; ![License](https://img.shields.io/github/license/tgtiburon/Readme_Architect?style=flat-square)
 
-## Features
-undefined
-## Contributing
+      To read about the license of this project click the link below.
+
+  &emsp;[License](https://github.com/tgtiburon/Readme_Architect/blob/main/LICENSE) 
+
+
+---
+  ## Contributing
 
       1. Contact me via my email 
 
       2. Post an issue on the repository. 
-## Tests
-
+---
+  ## Tests
       1. Run test 1 
-
       2. Run test2 
-
       3. Run Test 3 
 
-
+---
 ## Questions
 
 If you have any questions about this project feel free to [email](tg.tiburon@gmail.com) me .  

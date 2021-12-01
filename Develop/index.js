@@ -65,6 +65,19 @@ const questions = [
         }  
        
     },
+    {
+        type: 'input',
+        name: 'features',
+        message: 'Enter any features you want to highlight. Put a ";" at the end of each feature. (Enter for none)',
+        validate: installationInput => {
+            if(installationInput) {
+                return true;
+            } else {
+                //console.log('Please enter your installation steps!');
+                return false;
+            }
+        }  
+    },
 
     {
         type: 'checkbox',
@@ -237,6 +250,7 @@ const mockData = {
         github: 'tgtiburon',
         email: 'tg.tiburon@gmail.com',
         description: 'This project allows the user to create a professional Readme for any project they want.  ',
+        features: 'Generates a complete README from the commandline;Links directly to your repository;Links directly to your License',
         languages: [ 'JavaScript', 'Node.js', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
         license: [ 'MIT' ],
         installation: 'Clone from my git repository;install inquirer;Type node index.js in the command line',
