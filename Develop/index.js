@@ -78,6 +78,19 @@ const questions = [
             }
         }  
     },
+    {
+        type: 'input',
+        name: 'screenShot',
+        message: 'Enter the name of your screen shot file.  (Enter for none)',
+        validate: nameInput => {
+            if(nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your gitHub Username!');
+                return false;
+            }
+        }  
+    },
 
     {
         type: 'checkbox',
@@ -251,6 +264,7 @@ const mockData = {
         email: 'tg.tiburon@gmail.com',
         description: 'This project allows the user to create a professional Readme for any project they want.  ',
         features: 'Generates a complete README from the commandline;Links directly to your repository;Links directly to your License',
+        screenShot: "ReadME_Architect.PNG",
         languages: [ 'JavaScript', 'Node.js', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
         license: [ 'MIT' ],
         installation: 'Clone from my git repository;install inquirer;Type node index.js in the command line',
@@ -263,6 +277,30 @@ const mockData = {
         //tests: '',
         credits: 'img.shields.io'
         //credits: ''
+
+}
+
+const mockData2 = {
+    
+        
+    title: 'Weather_Watcher',
+    github: 'tgtiburon',
+    email: 'tg.tiburon@gmail.com',
+    description: "A weather website that lets the user search for any city in the world's weather.  It also stores the last 8 searches to make rescanning your favorite cities easier. ",
+    features: 'Working with arrays of objects;Creating a dynamic list of buttons;Buttons re-organize based on which button clicked;Working with complicated logic;Dynamically created web elements;Responsive design;Moment.js',
+    screenShot: "Weather_Watcher.PNG",
+    languages: [ 'JavaScript', 'JQuery', 'Bootstrap', 'CSS', "HTML" ],
+    license: [ 'MIT' ],
+    installation: 'Run at https://tgtiburon.github.io/Weather_Watcher/;or clone from my git repository and run locally',
+    //installation: '',
+    usage: 'Type any city in the Search for a City input box;It will keep your last 8 searches.',
+    //usage: '',
+    contributing: 'Contact me via my email;Post an issue on the repository.',
+    //constributing: '',
+    tests: 'Run test 1;Run test2;Run Test 3',
+    //tests: '',
+    credits: 'img.shields.io;Open Weather API'
+    //credits: ''
 
 }
 

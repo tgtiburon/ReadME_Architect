@@ -9,8 +9,6 @@
   ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) 
 ## Description
 This project allows the user to create a professional Readme for any project they want.  
-
-
 ---
   ## Features
 
@@ -19,13 +17,13 @@ This project allows the user to create a professional Readme for any project the
       2. Links directly to your repository 
 
       3. Links directly to your License 
-
-
 ---
   ## Table of Contents
   [Installation](#installation)
     
   [Usage](#usage)
+    
+  [Credits](#credits)
     
   [License](#license)
     
@@ -36,6 +34,15 @@ This project allows the user to create a professional Readme for any project the
   [Questions](#questions)
   
   
+
+---
+## Screenshot of Readme_Architect in action
+  ![](./images/ReadME_Architect.PNG)
+  
+  
+
+
+
 
   ---
   ## Installation
@@ -65,8 +72,7 @@ This project allows the user to create a professional Readme for any project the
 
   &emsp;[License](https://github.com/tgtiburon/Readme_Architect/blob/main/LICENSE) 
 
-
----
+  ---
   ## Contributing
 
       1. Contact me via my email 

@@ -54,6 +54,12 @@ const generateTOC = data => {
   [Usage](#usage)`;
   }
 
+  if (data.credits !== ''){ 
+    stringTOC += `
+    
+  [Credits](#credits)`;
+  }
+
   if (data.license !== ''){ 
     stringTOC += `
     
@@ -192,7 +198,8 @@ const generateFeatures = data => {
 
 const generateContributing = data => {
   if(data.contributing !== ''){
-    let stringContributing = `---
+    let stringContributing = `
+  ---
   ## Contributing`;
   
     let tmpString = data.contributing;
@@ -300,6 +307,25 @@ const generateBadges = data => {
 return strLanguages;
 };
 
+const generateScreenShot = data => {
+
+  if(data.screenShot !== ''){
+    let stringScreenShot = `---
+## Screenshot of ${data.title} in action
+  ![](./images/${data.screenShot})
+  
+  `;
+  
+    
+
+   
+
+    return stringScreenShot
+  };
+  
+
+}
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -308,9 +334,13 @@ function generateMarkdown(data) {
 ${generateBadges(data)}
 ## Description
 ${data.description}
-
 ${generateFeatures(data)}
 ${generateTOC(data)}
+
+${generateScreenShot(data)}
+
+
+
 ${generateInstallation(data)}
 ${generateUsage(data)}
 ${generateCredits(data)}
