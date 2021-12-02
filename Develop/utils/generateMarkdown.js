@@ -428,6 +428,8 @@ Below is a graphic displaying my most used languages on github.
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${data.github})
 
+
+This Readme file was 100% created with Readme Architect by Tony Gendreau &copy;
 `;
 }
 
