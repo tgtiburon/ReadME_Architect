@@ -148,12 +148,16 @@ function writeToFile(fileName, data) {
 
     return new Promise((resolve, rejects) => {
         // code is pending while waiting for response
+        // add the path
+
+        fileName = "../develop/dist/" + fileName
         fs.writeFile(fileName, data, err => {
             // if there is an error reject the promise
             // will trigger the .catch of the promise
             if(err) {
                 // return out of function to make sure promise does 
                 // not accidently resolve
+                console.log(err);
                 rejects(err);
                 return;
             }
@@ -194,7 +198,7 @@ function init() {
         
     })
     .then(writeFileResponse => {
-        console.log(writeFileResponse);
+        //console.log(writeFileResponse);
     })
     // error catching for inquirer
     .catch((error) => {

@@ -5,7 +5,7 @@
 */
 function renderLicenseBadge(license) {
   data = license;
-  console.log(data.license);
+ 
   if(data.license !== ''){
     return `
   &emsp; ![License](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)`;
@@ -21,7 +21,7 @@ function renderLicenseBadge(license) {
 */
 function renderLicenseLink(license) {
   data = license;
-  console.log(data.license);
+  
   if(data.license !== ''){
     return `
       To read about the license of this project click the link below.
@@ -41,7 +41,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
 
   data = license;
-  console.log(data.license);
+  //.log(data.license);
   if(data.license !== ''){
     return `
   ---
@@ -374,7 +374,7 @@ const generateScreenShot = data => {
   if(data.screenShot !== ''){
     let stringScreenShot = `---
 ## Screenshot of ${data.title} in action
-  ![](./images/${data.screenShot})
+  ![](../dist/${data.screenShot})
   
   `;
   
@@ -429,7 +429,7 @@ Below is a graphic displaying my most used languages on github.
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${data.github})
 
 
-This Readme file was 100% created with Readme Architect by Tony Gendreau &copy;
+This Readme file was created with Readme Architect by Tony Gendreau &copy;
 `;
 }
 
