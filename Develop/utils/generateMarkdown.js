@@ -59,8 +59,19 @@ const generateTOC = data => {
   let stringTOC = `---
   ## Table of Contents`;
 
+  if (data.features !== ''){ 
+    stringTOC += `
+
+  [Features](#features)`;
+  }
+  if (data.screenShot !== ''){ 
+    stringTOC += `
+
+  [Screenshot](#screenshot)`;
+  }
   if (data.installation !== ''){ 
     stringTOC += `
+
   [Installation](#installation)`;
   }
 
@@ -117,6 +128,7 @@ const generateInstallation = data => {
   if(data.installation !== ''){
     let stringInstallation = `
   ---
+
   ## Installation`;
    
     let tmpString = data.installation;
@@ -210,7 +222,9 @@ const generateCredits = data => {
 */
 const generateFeatures = data => {
   if(data.features !== ''){
-    let stringFeatures = `---
+    let stringFeatures = `
+---
+
 ## Features`;
   
     let tmpString = data.features;
@@ -373,8 +387,9 @@ const generateScreenShot = data => {
 
   if(data.screenShot !== ''){
     let stringScreenShot = `---
-## Screenshot of ${data.title} in action
-  ![](../dist/${data.screenShot})
+
+## Screenshot 
+  ![](${data.screenShot})
   
   `;
   
@@ -399,14 +414,12 @@ function generateMarkdown(data) {
 ---
 ${generateBadges(data)}
 ## Description
+
 ${data.description}
-${generateFeatures(data)}
+
 ${generateTOC(data)}
-
+${generateFeatures(data)}
 ${generateScreenShot(data)}
-
-
-
 ${generateInstallation(data)}
 ${generateUsage(data)}
 ${generateCredits(data)}
@@ -419,7 +432,7 @@ ${generateTests(data)}
 ---
 ## Questions
 
-If you have any questions about this project feel free to [email](${data.email}) me .  
+If you have any questions about this project feel free to email me at <${data.email}>.  
 
 To see the rest of my portfolio, visit [Github](https://github.com/${data.github}).
 ![](./images/GitHub-Mark-32px.png)
