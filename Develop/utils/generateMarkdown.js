@@ -10,6 +10,7 @@ function renderLicenseBadge(license) {
     return `
   &emsp; ![License](https://img.shields.io/github/license/${data.github}/${data.title}?style=flat-square)`;
     };
+    return ``;
   
 }
 
@@ -28,6 +29,7 @@ function renderLicenseLink(license) {
   &emsp;[License](https://github.com/${data.github}/${data.title}/blob/main/LICENSE) `
     
     };
+    return ``;
 
 }
 
@@ -45,6 +47,7 @@ function renderLicenseSection(license) {
   ---
   ## License `
     };
+    return ``;
 }
 /*  Function: genrateTOC()  
     => generates a table of contents based on inquirer answers
@@ -133,6 +136,7 @@ const generateInstallation = data => {
   return stringInstallation;
 
   };
+  return ``;
 
 };
 /*  Function: generateUsage()  
@@ -163,6 +167,7 @@ const generateUsage = data => {
   return stringUsage;
 
   };
+  return ``;
 
 };
 /*  Function: generateCredits()  
@@ -194,6 +199,8 @@ const generateCredits = data => {
   return stringCredits;
 
   };
+
+  return ``;
  
 };
 /*  Function: generateFeatures()  
@@ -224,6 +231,7 @@ const generateFeatures = data => {
   return stringFeatures;
 
   };
+  return ``;
 };
 /*  Function: generateContributing()  
     => generates how to contribute directions 
@@ -254,6 +262,7 @@ const generateContributing = data => {
   return stringContributing;
 
   };
+  return ``;
   
 };
 
@@ -281,6 +290,7 @@ const generateTests = data => {
   return stringTests;
 
   };
+  return ``;
 
 };
 /*  Function: generateBadges()  
@@ -374,6 +384,7 @@ const generateScreenShot = data => {
 
     return stringScreenShot
   };
+  return ``;
   
 
 }

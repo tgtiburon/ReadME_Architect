@@ -63,31 +63,6 @@ const questions = [
         }  
        
     },
-    {
-        type: 'input',
-        name: 'features',
-        message: 'Enter any features you want to highlight. Put a ";" at the end of each feature. (Enter for none)',
-        validate: installationInput => {
-            if(installationInput) {
-                return true;
-            } else {
-                return false;
-            }
-        }  
-    },
-    {
-        type: 'input',
-        name: 'screenShot',
-        message: 'Enter the name of your screen shot file.  (Enter for none)',
-        validate: nameInput => {
-            if(nameInput) {
-                return true;
-            } else {
-                console.log('Please enter your gitHub Username!');
-                return false;
-            }
-        }  
-    },
 
     {
         type: 'checkbox',
@@ -113,73 +88,52 @@ const questions = [
                     'PostgreSQL License', 'SIL Open Font License 1.1', 'University of Illinois/NCSA Open Source License', 'The Unlicense', 
                     'zLib License']
     },
+    {
+        type: 'input',
+        name: 'features',
+        message: 'Enter any features you want to highlight. Put a ";" at the end of each feature. (Enter for none)',
+       
+    },
+    {
+        type: 'input',
+        name: 'screenShot',
+        message: 'Enter the name of your screen shot file.  (Enter for none)',
+       
+    },
+
+  
 
     {
         type: 'input',
         name: 'installation',
         message: 'Enter installation steps. Put a ";" at the end of each step. (Enter for none)',
-        validate: installationInput => {
-            if(installationInput) {
-                return true;
-            } else {
-                //console.log('Please enter your installation steps!');
-                return false;
-            }
-        }  
+       
     },
     {
         type: 'input',
         name: 'usage',
         message: 'Enter how to use this project. Put a ";" at the end of each step. (Enter for none)',
-        validate: usageInput => {
-            if(usageInput) {
-                return true;
-            } else {
-                //console.log('Please enter how to use this project!');
-                return false;
-            }
-        }  
+       
     },
  
     {
         type: 'input',
         name: 'contributing',
         message: 'How can people contribute to the project? Put a ";" at the end of each way. (Enter for none)',
-        validate: contributingInput => {
-            if(contributingInput) {
-                return true;
-            } else {
-                //console.log('Please enter how you want people to contribute!');
-                return false;
-            }
-        }  
+       
     },
     {
         type: 'input',
         name: 'tests',
         message: 'Enter tests that can be conducted. Put a ";" at the end of each test. (Enter for none)',
-        validate: testsInput => {
-            if(testsInput) {
-                return true;
-            } else {
-                //console.log('Please enter the tests that can be done!');
-                return false;
-            }
-        }  
+       
     },
    
     {
         type: 'input',
         name: 'credits',
         message: 'Are there any sources you would like to credit? Put a ";" at the end of each. (Enter for none)',
-        validate: creditsInput => {
-            if(creditsInput) {
-                return true;
-            } else {
-                //console.log('Please enter the tests that can be done!');
-                return false;
-            }
-        }  
+       
     }
 ];
 
@@ -289,7 +243,7 @@ function init() {
 
     inquirer
   
-   // .prompt(questions)
+    //.prompt(questions)
     .prompt(debugQuest)
     
    
