@@ -48,7 +48,11 @@ This application allows the user to create a professional Readme markdown file f
   ![](ReadME_Architect.PNG)
 
   
-  <iframe src="https://drive.google.com/file/d/1soa3qjEEMhE1Rb5K3XjW1956j46D0z1M/preview" width="640" height="480"></iframe>
+ **Here is a screenshot showing how to enter information with the inquirer prompt and how it shows up in the readme as markdown.**
+
+
+  ![](prompt.PNG)
+  [Here is a link to a video showing me generate a Readme file](https://drive.google.com/file/d/1soa3qjEEMhE1Rb5K3XjW1956j46D0z1M/preview)
   
   
 
@@ -88,7 +92,7 @@ This application allows the user to create a professional Readme markdown file f
 ---
   ## Tests
       1. Run test 1 
-      2. Run test2 
+      2. Run test 2 
       3. Run Test 3 
 
 ---
